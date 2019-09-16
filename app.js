@@ -3,7 +3,7 @@ const forecast = require('./utils/forecast')
 
 const userLocation = process.argv[2];
 
-geocode(userLocation, (error, data) => {
+geocode(userLocation, (error, { latitude, longitude, location }) => {
     if (!userLocation) {
         return console.log('Please provide a location.')
     }
@@ -12,12 +12,12 @@ geocode(userLocation, (error, data) => {
         return console.log(error)
     }
 
-    forecast(data.latitude, data.longitude, (error, forecastData) => {
+    forecast(latitude, longitude, (error, forecastData) => {
         if (error) {
             return console.log(error)
         }
 
-        console.log(data.location)
+        console.log(location)
         console.log(forecastData)
     })
 })
