@@ -1,4 +1,5 @@
 const request = require('request')
+const geocode = require('./utils/geocode')
 
 // DarkSky (weather requests)
 
@@ -30,15 +31,19 @@ const request = require('request')
 //     }
 // })
 
-const add = (first, second, callback) => {
-    setTimeout(() => {
-        const sum = first + second
+// const add = (first, second, callback) => {
+//     setTimeout(() => {
+//         const sum = first + second
 
-        callback(sum)
-    }, 2000);
-} 
+//         callback(sum)
+//     }, 2000);
+// } 
 
-add(1, 4, (sum) => {
-    console.log(sum) // Should print: 5
+// add(1, 4, (sum) => {
+//     console.log(sum) // Should print: 5
+// })
+
+geocode('Glasgow', (error, data) => {
+    console.log('Error:', error)
+    console.log('Data:', data)
 })
-
