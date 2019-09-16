@@ -1,7 +1,54 @@
-h1 {
-    color: red;
+:root {
+    color: #222;
+    font-family: sans-serif;
+    height: 100%;
+}
+
+
+body {
+    max-width: 38em;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+a {
+    color: firebrick;
 }
 
 img {
     width: 300px;
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 2rem 0 0;
+}
+
+nav {
+    margin-top: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+}
+
+nav li+li {
+    margin-left: 1rem;
+}
+
+main {
+    margin-top: 2rem;
+    min-width: 0;
+}
+
+footer {
+    border-top: 1px solid #eee;
+    color: #888;
+    margin-top: 5rem;
 }
