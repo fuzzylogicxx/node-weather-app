@@ -59,3 +59,19 @@ footer {
     color: #888;
     margin-top: 5rem;
 }
+
+label {
+    display: block;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: .5rem;
+}
+
+button {
+    border: 1px solid #888;
+    background-color: #888;
+    color: #fff;
+    padding: .5rem;
+}
