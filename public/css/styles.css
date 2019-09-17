@@ -1,18 +1,26 @@
+@supports (display:grid) { 
+    html {
+        height: 100%;
+    }
+    body {
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+    }
+    main {
+        min-width: 0;
+    }
+}
+
 :root {
     color: #222;
     font-family: sans-serif;
-    height: 100%;
 }
-
 
 body {
     max-width: 38em;
     margin: 0 auto;
     padding: 0 1rem;
-
-    min-height: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
 }
 
 a {
@@ -44,7 +52,6 @@ nav li+li {
 
 main {
     margin-top: 2rem;
-    min-width: 0;
 }
 
 footer {
